@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ProductController } from './product.controller';
 import { ProductModel } from './product.model';
 import { TypegooseModule } from 'nestjs-typegoose';
+import { ProductService } from './product.service';
 
 @Module({
   controllers: [ProductController],
@@ -15,5 +16,6 @@ import { TypegooseModule } from 'nestjs-typegoose';
       },
     ]),
   ],
+  providers: [ProductService],
 })
 export class ProductModule {}
